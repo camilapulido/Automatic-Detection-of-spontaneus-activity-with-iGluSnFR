@@ -40,11 +40,11 @@ Spontaneous glutamate release frequency can be increased by artificially changin
 
 [Execute Function](https://github.com/camilapulido/iGlusnFr-spontaneus-minis-detection/blob/a22b0a206a757ff2408505cf721da770b623df81/Code/Igor_%20Spontaneous%20Events%20Detection.ipf#L170) to automatically run a threshold analysis based on baseline signal noise (1.3xSD of AVG signal noise) and automatically detect fast spontaneous release of glutamate: 
 
-<img src="./Figures/Minis_Trace_Example_marks.png" alt="SucroseTrace" style="width: 1000px;"/>
+<img src="./Figures/Minis_Trace_Example_marks.png" alt="SucroseTraceMarks" style="width: 1000px;"/>
 
 Individual events will be automatically sorted and plotted together:
 
-<img src="./Figures/Minis_superimposed.png" alt="SucroseTrace" style="width: 500px;"/>
+<img src="./Figures/Minis_superimposed.png" alt="Minis" style="width: 500px;"/>
 
 
 
