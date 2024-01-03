@@ -44,15 +44,15 @@ Function iGlusBoutonsILoadMinis(VDate, CellNo,CtrlNo)
 				string name2  = NameListout[x]+"_"+num2str(y)+ "_AVG"
 				String nameOut = NameListout[x]+"_"+num2str(y)+"_Btns"
 				
-				String NameBlack = NameBase + "_"+Namelist[x]+"_"+num2str(y)+"_Black.txt"
-				String NameOutBlack = NameListout[x]+"_"+num2str(y)+"_Black"
+				String NameBG = NameBase + "_"+Namelist[x]+"_"+num2str(y)+"_BG.txt"
+				String NameOutBG = NameListout[x]+"_"+num2str(y)+"_BG"
 				if (x==1 || x==2)
 					name = NameBase+"_"+Namelist[x]+"_Btns.xls"
 					name2  = NameListout[x]+"_AVG"
 					nameOut = NameListout[x]+"_Btns"
 					
-					NameBlack = NameBase + "_"+Namelist[x]+"_Black.txt"
-					NameOutBlack = NameListout[x]+"_Black"
+					NameBG = NameBase + "_"+Namelist[x]+"_BG.txt"
+					NameOutBG = NameListout[x]+"_BG"
 				endif	
 				/// Load responses per bouton 
 				LoadWave/J/M/D/A=W/U={0,0,1,0}/W/K=0 Folder+NameBase+":"+name
@@ -87,7 +87,7 @@ Function iGlusBoutonsILoadMinis(VDate, CellNo,CtrlNo)
 			duplicate/o WConca, $NameListout[x]+"_Btns"
 			KillWaves WConca 
 					
-			Roislist = WaveList(NameListout[x]+"*_Black*",";","")
+			Roislist = WaveList(NameListout[x]+"*_BG*",";","")
 			Concatenate/Kill/O/NP=0  Roislist, WConca
 			
 			duplicate/o WConca, $NameListout[x]+"_Btns_BG"
@@ -103,8 +103,8 @@ Function iGlusBoutonsILoadMinis(VDate, CellNo,CtrlNo)
 				KillWaves W0
 				redimension/N=(-1,dimsize($name2,1)-1) $name2
 				
-				NameBlack = NameBase+"_"+Namelist[x]+"_BG.txt"
-				NameOutBlack = NameListout[x]+"_BG"
+				NameBG = NameBase+"_"+Namelist[x]+"_BG.txt"
+				NameOutBG = NameListout[x]+"_BG"
 				
 				LoadWave/J/D/W/N/O/K=0 Folder+NameBase+":"+NameBG
 				wave MeanW
