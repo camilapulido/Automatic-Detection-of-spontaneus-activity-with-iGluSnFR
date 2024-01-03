@@ -15,3 +15,5 @@ Author: Camila Pulido
 Spontaneous glutamate realease can be detected by the increase in fluorescent signal within synaptic boutons. The sample video bellow exemplified spontaneous activity in a synaptic bouton labeled with an arrow:
 
 <img src="./Figures/Axon_SynapticBouton_SpontaneousRelease_Arrow3.gif" alt="BoutonActivity" style="width: 400px;"/>
+
+Signal information corresponding to that specific bouton or multiple ones can be extracted and save by using ImageJ sofware and ['Time Series Analyzer'](https://imagej.net/ij/plugins/time-series.html) Plugin. Briefly simply place an round ROI in desired bouton and Get signal in the corresponding ROI. 
