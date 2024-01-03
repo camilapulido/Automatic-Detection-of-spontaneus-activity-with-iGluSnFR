@@ -12,5 +12,6 @@ Author: Camila Pulido
 
 ## Image collection and preprocessing: 
 
-Spontaneous glutamate realease can be detected by the increase in fluorescent signal within synaptic boutons. The sample video bellow is exemplifed spontaneous activity in on synaptic bouton labbeled with an arrow. 
+Spontaneous glutamate realease can be detected by the increase in fluorescent signal within synaptic boutons. The sample video bellow exemplified spontaneous activity in a synaptic bouton labeled with an arrow:
 
+<img src="./Figures/Axon_SynapticBouton_SpontaneousRelease_Arrow3.gif" alt="BoutonActivity" style="width: 400px;"/>
