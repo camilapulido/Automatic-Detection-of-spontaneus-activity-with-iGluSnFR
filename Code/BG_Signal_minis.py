@@ -10,7 +10,7 @@ xVal= 1600 ##1250 ## x value to click in Get Avg
 yVal = 229 ##240
 
 
-Date = 210326
+Date = 240103
 Cell = 2
 Type = 1 ## 0 = WT; 1 = TeTN; 2 = M13KD
 
@@ -27,11 +27,9 @@ if Type == 1:
 	CellType = "_M13KDBFP"
 ####################
 ########################
-##FolderOUT = "/home/camila/Dropbox/LABORATORY/ANALYSIS/VGlut_pH/Minis/2021/perBouton/"+str(Date)+"_C"+str(Cell)+"/"
-##FolderIN = "/home/camila/Dropbox/LABORATORY/DATA/vGlut_pH/2021/"+str(Date)+"/C"+str(Cell)+"/"
 
-FolderOUT = "C:\\Users\\cmp2010\\Dropbox\\LABORATORY\\ANALYSIS\\VGlut_pH\\Minis\\2021\\perBouton\\"+str(Date)+"_C"+str(Cell)+"\\"
-FolderIN = "C:\\Users\\cmp2010\\Dropbox\\LABORATORY\\DATA\\VGlut_pH\\2021\\"+str(Date)+"\\C"+str(Cell)+"\\"
+FolderOUT = "C:\\Users\\ANALYSIS\\VGlut_pH\\Minis\\perBouton\\"+str(Date)+"_C"+str(Cell)+"\\"
+FolderIN = "C:\\Users\\DATA\\"+str(Date)+"\\C"+str(Cell)+"\\"
 
 if not os.path.exists(FolderOUT):
     os.makedirs(FolderOUT)
