@@ -16,7 +16,11 @@ Spontaneous glutamate realease can be detected by the increase in fluorescent si
 
 <img src="./Figures/Axon_SynapticBouton_SpontaneousRelease_Arrow3.gif" alt="BoutonActivity" style="width: 400px;"/>
 
-Signal information corresponding to that specific bouton or multiple ones can be extracted and save by using ImageJ sofware and ['Time Series Analyzer'](https://imagej.net/ij/plugins/time-series.html) Plugin. Briefly simply place a round ROI in the desired bouton and Get signal in the corresponding ROI. Effortlessly extract and save signal information from every frame, by simply executing the ['Getting Boutons signal code'](Code/SingleBoutons_Minis_iGluSnFR.py), ensuring to save the selected ROIs for future reference (one of the steps in the code).
+Signal information corresponding to that specific bouton can be extracted and save by using ImageJ sofware and ['Time Series Analyzer'](https://imagej.net/ij/plugins/time-series.html) Plugin. Briefly simply place a round ROI in the desired bouton and Get signal in the corresponding ROI. 
+
+<img src="./Figures/MiniExample_for Video.png" alt="BoutonTrace" style="width: 800px;"/>
+
+Effortlessly extract and save signal information from every frame, by simply executing the ['Getting Boutons signal code'](Code/SingleBoutons_Minis_iGluSnFR.py), ensuring to save the selected ROIs for future reference (one of the steps in the code).
 
 Draw ROIS corresponding to the background of neurons, and execute the [Background code]() to automatically get and save backgroung data signal.
 
@@ -27,5 +31,19 @@ https://github.com/camilapulido/iGlusnFr-spontaneus-minis-detection/blob/c6e137f
 Correct synaptic boutons signals by subtracting background noise:
 https://github.com/camilapulido/iGlusnFr-spontaneus-minis-detection/blob/c6e137f3950aa6ea50df106312a98c088a54ff57/Code/Igor_%20Spontaneous%20Events%20Detection.ipf#L121
 
-
 At this point, the data is organized and prepared for analysis!
+
+## Spontaneaus Activity Detection and spike Sorting:
+Spontaneous neurotransmitter release frequency can be increased by artificially changing the osmolaryty of the neuron, for example by exposing the neuron to 250mM of Sucrose:
+
+<img src="./Figures/Minis_Trace_Example_NOmarks.png" alt="SucroseTrace" style="width: 1000px;"/>
+
+
+[Execute Function](https://github.com/camilapulido/iGlusnFr-spontaneus-minis-detection/blob/a22b0a206a757ff2408505cf721da770b623df81/Code/Igor_%20Spontaneous%20Events%20Detection.ipf#L170) to autommatically run a threshold analysis based on the standart deviation of baseline signal noise and to automatically detect fast spontaneous release of glutamate: 
+
+<img src="./Figures/Minis_Trace_Example_marks.png" alt="SucroseTrace" style="width: 1000px;"/>
+
+idividual events can be sorted and plotted together:
+<img src="./Figures/Minis_superimposed.png" alt="SucroseTrace" style="width: 1000px;"/>
+
+
