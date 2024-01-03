@@ -5,18 +5,17 @@ from ij.gui import Roi, Plot
 from ij.measure import Measurements, ResultsTable
 from ij.io import FileSaver 
 import os
-
+import time
 ###### Setup Val ####
 xVal=  1600  ##1600 ##1250 ## x value to click in Get Avg
 yVal =  229 ##229 ##240 
-
+Waitfor = 1  # in seconds
 #####
-
-Date = 210511
+Date = 240103
 Cell = 1
-Type = 0 ## 0 = WT; 1 = TeTN; 2 = M13KD
+Type = 0 ## 0 = WT; 1 = TeTN; 2 = M13KD /// =!Conditions
 
-Calibration = 4 ### 0 = NH4Cl; 1 = Minis; 2= 100AP10Hz; 4=SaveROIs
+Calibration = 4 ### 0 = Saturation; 1 = Minis; 2= 100AP10Hz; 4=SaveROIs
 step = 0	## 0 = Initial; 1= after20min 
 
 Concentration = ""
@@ -32,13 +31,11 @@ if Type == 1:
 	CellType = "_M13KD"
 ####################
 ########################
-##FolderOUT = "/home/camila/Dropbox/LABORATORY/ANALYSIS/iGluSnFR/iGlus_v875/2021/perBouton/"+str(Date)+"_C"+str(Cell)+"/"
-##FolderIN = "/home/camila/Dropbox/LABORATORY/DATA/iGluSnFR/iGlus_v875/2021/"+str(Date)+"/C"+str(Cell)+"/"
 
-FolderOUT = "C:\\Users\\cmp2010\\Dropbox\\LABORATORY\\ANALYSIS\\iGluSnFR\\iGlus_v875\\2021\\perBouton\\"+str(Date)+"_C"+str(Cell)+"\\"
-FolderIN = "C:\\Users\\cmp2010\\Dropbox\\LABORATORY\\DATA\\iGluSnFR\\iGlus_v875\\2021\\"+str(Date)+"\\C"+str(Cell)+"\\"
+FolderOUT = "C:\\Users\\ANALYSIS\\iGluSnFR\\perBouton\\"+str(Date)+"_C"+str(Cell)+"\\"
+FolderIN = "C:\\Users\\DATA\\iGluSnFR\\"+str(Date)+"\\C"+str(Cell)+"\\"
 
-
+#####################
 if not os.path.exists(FolderOUT):
     os.makedirs(FolderOUT)
 
@@ -92,17 +89,15 @@ if Calibration == 1:
 			imp.show()
 
 			imp = IJ.run(imp, "Z Project...", " projection=[Average Intensity]")
-			for x in range(0,1000000):
-				x=x
+			
+			time.sleep(Waitfor)
 				
 			imp = IJ.selectWindow("AVG_"+NameIN+".fits")
 			imp = IJ.getImage()
 					 
 			IJ.run("IJ Robot", "order=Left_Click x_point="+str(xVal)+" y_point=180 delay=100 keypress=[]") ## RECENTER
-			#IJ.run("IJ Robot", "order=Left_Click x_point=1600 y_point=185 delay=10 keypress=[]") ## RECENTER
-
-			for x in range(0,10000000):
-				x=x
+			
+			time.sleep(Waitfor)
 			
 			imp = IJ.selectWindow("AVG_"+NameIN+".fits")
 			imp = IJ.getImage()
@@ -111,13 +106,11 @@ if Calibration == 1:
 			imp = IJ.selectWindow(NameIN+".fits")
 			imp = IJ.getImage()			
 		
-			for x in range(0,10000000):
-				x=x
+			time.sleep(Waitfor)
 		
 			IJ.run("IJ Robot", "order=Left_Click x_point="+str(xVal)+" y_point="+str(yVal)+" delay=50 keypress=[]") ## GET AVG
 
-			for x in range(0,10000000):
-				x=x
+			time.sleep(Waitfor)
 		
 			IJ.renameResults("Time Trace(s)", "Results")
 			IJ.saveAs("Results", pathOut1)
@@ -166,13 +159,11 @@ if Calibration == 2:
 		imp = IJ.selectWindow(NameIN+".fits")
 		imp = IJ.getImage()			
 		
-		for x in range(0,10000000):
-			x=x
+		time.sleep(Waitfor)
 		
 		IJ.run("IJ Robot", "order=Left_Click x_point="+str(xVal)+" y_point="+str(yVal)+" delay=50 keypress=[]")  ## GET AVG
 	
-		for x in range(0,10000000):
-			x=x
+		time.sleep(Waitfor)
 	
 		IJ.renameResults("Time Trace(s)", "Results")
 		IJ.saveAs("Results", pathOut1)
