@@ -27,7 +27,7 @@ Import the signal information from all boutons, along with their corresponding b
 https://github.com/camilapulido/Automatic-Detection-of-spontaneus-activity-with-iGluSnFR/blob/c6e137f3950aa6ea50df106312a98c088a54ff57/Code/Igor_%20Spontaneous%20Events%20Detection.ipf#L4
 
 Correct synaptic boutons signals by subtracting background noise:
-https://github.com/camilapulido/iGlusnFr-spontaneus-minis-detection/blob/c6e137f3950aa6ea50df106312a98c088a54ff57/Code/Igor_%20Spontaneous%20Events%20Detection.ipf#L121
+https://github.com/camilapulido/Automatic-Detection-of-spontaneus-activity-with-iGluSnFR/blob/c6e137f3950aa6ea50df106312a98c088a54ff57/Code/Igor_%20Spontaneous%20Events%20Detection.ipf#L121
 
 At this point, the data is organized and prepared for analysis!
 
