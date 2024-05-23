@@ -3,7 +3,7 @@ Author: Camila Pulido
 
 ##
 > [!NOTE]
->* This protocol delineates the analysis for the detection of spontaneous activity within synaptic boutons, employing the genetically engineered Glutamate sensors iGluSnFR, published [here](https://www.biorxiv.org/content/10.1101/2023.08.24.554624v1)
+>* This protocol delineates the analysis for the detection of spontaneous activity within synaptic boutons, employing the genetically engineered Glutamate sensors iGluSnFR, published [here](https://www.nature.com/articles/s41592-018-0171-3)
 >* This protocol is intended to use two analysis programs: [ImageJ (Fiji)](https://fiji.sc/) and [IGOR Pro (wavemetrics)](https://www.wavemetrics.com/).
 
 > [!IMPORTANT]
